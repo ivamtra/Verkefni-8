@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="is">
+  <head>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤡</text></svg>"
+    />
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Verkefni 8: Finndu boltann!</title>
+    <script src="main.js" type="module"></script>
+  </head>
+  <body>
+    <main class="game">
+      <section class="game__main game__main--hidden">
+        <h1 class="heading">Finndu boltann!</h1>
+        <div class="cups">
+          <div class="cup">
+            <div class="cup__content">
+              <svg class="cup__svg" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  fill="currentColor"
+                  d="M31 2H1a1 1 0 0 0-1 1v22a3 3 0 0 0 3 3h2v1a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-1h2a3 3 0 0 0 3-3v-3.05c4.72-.52 6-4.68 6-6.95V3a1 1 0 0 0-1-1Zm-7 23a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V4h22Zm6-10c0 .19-.06 4.32-4 4.92V4h4Z"
+                />
+              </svg>
+            </div>
+            <button class="cup__button">1</button>
+          </div>
+          <div class="cup">
+            <div class="cup__content">
+              <span class="cup__ball"></span>
+            </div>
+            <button class="cup__button">2</button>
+          </div>
+          <div class="cup">
+            <div class="cup__content"></div>
+            <button class="cup__button">3</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="game__waiting">
+        <p class="heading">Byrjaðu nýjan leik!</p>
+      </section>
+
+      <section class="game__option">
+        <h2 class="heading">Hversu marga bolla?</h2>
+        <p>Þú færð N-1 stig ef þú giskar á rétt fyrir N bolla.</p>
+        <form class="form">
+          <input class="form__input" type="number" id="cups" name="cups" value="" />
+          <button class="form__button">Byrja leik</button>
+          <div class="form__error form__error--hidden">
+            Fjöldi bolla verður að vera á bilinu 2–<span id="max_cups">9</span>
+          </div>
+        </form>
+        <div class="score">
+          <p>Stig: <span id="points">0</span> stig</p>
+          <p>Spilaðir leikir: <span id="games">0</span> leiki</p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

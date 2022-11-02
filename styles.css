@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --font-base-body-px: 16px;
+  --font-family: system-ui;
+  --spacing: 1rem;
+  --max-width: 600px;
+  --cup-width: 100px;
+  --cup-color: #000;
+  --cup-color-invert: #fff;
+  --cup-color-ball: #f00;
+  --color-form-error: #900;
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-size: var(--font-base-body-px);
+  font-family: var(--font-family);
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--spacing);
+  width: 100%;
+}
+
+.heading {
+  margin-bottom: calc(var(--spacing) / 2);
+
+  font-size: 2rem;
+}
+
+.form {
+  margin-top: calc(var(--spacing) / 2);
+  margin-bottom: calc(var(--spacing) / 2);
+}
+
+.form__error {
+  margin-top: calc(var(--spacing) / 2);
+
+  color: var(--color-form-error);
+  visibility: visible;
+}
+
+.form__error--hidden {
+  visibility: hidden;
+}
+
+.game {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--spacing) * 2);
+}
+
+.game__option {
+  order: -1;
+}
+
+.game__main {
+  display: block;
+}
+
+.game__main--hidden {
+  display: none;
+}
+
+.game__waiting {
+  display: block;
+}
+
+.game__waiting--hidden {
+  display: none;
+}
+
+.cups {
+  display: flex;
+  flex-wrap: wrap;
+  gap: calc(var(--spacing));
+}
+
+.cup {
+  display: flex;
+  flex-direction: column;
+  width: var(--cup-width);
+}
+
+.cup__content {
+  flex: 1;
+
+  display: flex;
+}
+
+.cup__svg {
+  width: var(--cup-width);
+  color: var(--cup-color);
+  transform: rotate(180deg);
+}
+
+.cup__button {
+  width: 100%;
+  background-color: var(--cup-color);
+  color: var(--cup-color-invert);
+  font-size: 2rem;
+  border: 0;
+  border-radius: 5px;
+}
+
+.ball {
+  display: block;
+  margin: auto;
+  border-radius: 100%;
+  width: calc(var(--cup-width) / 2);
+  aspect-ratio: 1 / 1;
+  background-color: var(--cup-color-ball);
+}
