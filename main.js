@@ -84,6 +84,9 @@ function onCupClick(e) {
   // Sýna wait eftir 1000 ms
   setTimeout(() => {
     showScreen("wait");
+
+    // Sýna byrja nýjan leik aftur
+    document.getElementsByClassName("game__waiting")[0].classList.remove('game__waiting--hidden')
   }, SHOW_WAITINGSCREEN_TIME);
 
   // Kemur í veg fyrir að played hækkar eftir fyrsta click
